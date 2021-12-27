@@ -2,7 +2,7 @@ import ApiSettings from './fetchAPI';
 import Notiflix from 'notiflix';
 
 import 'simplelightbox/dist/simple-lightbox.min.css';
-import simpleLightbox from 'simplelightbox';
+// import simpleLightbox from 'simplelightbox';
 
 const refs = { 
     searchForm: document.querySelector('.search-form'),
@@ -26,7 +26,7 @@ function handleSubmit(event) {
                 Notiflix.Notify.failure("Sorry, there are no images matching your search query. Please try again.");
             } else {
                 renderCardAfter(addCardOnDom(val));
-                await lightbox.refresh();
+                // await lightbox.refresh();
                 pixabayApi.totalHits(val.data.hits.length);
                 pixabayApi.nextPage();
                 refs.loadMoreBtn.style.display = 'block';
@@ -73,7 +73,7 @@ refs.loadMoreBtn.addEventListener('click', handleClick);
 function handleClick() { 
     pixabayApi.GetFetchApi().then(async function (val) {
         renderCardBefore(addCardOnDom(val));
-        await lightbox.refresh();
+        // await lightbox.refresh();
         pixabayApi.totalHits(val.data.hits.length);
         if (pixabayApi.valueHits >= val.data.totalHits) { 
             refs.loadMoreBtn.style.display = 'none';
@@ -84,4 +84,4 @@ function handleClick() {
     });
 };
 
-const lightbox = new simpleLightbox('.gallery a');
+// const lightbox = new simpleLightbox('.gallery a');
