@@ -1,0 +1,59 @@
+img {
+    width: 350px;
+    height: 250px;
+}
+
+.search-form {
+    text-align: center;
+    background-color: cornflowerblue;
+}
+
+.gallery {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.photo-card {
+    box-shadow: 0 10px 6px -6px #777;
+    border-radius: 5%;
+}
+
+.info {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    display: block;
+    margin-top: 30px;
+    text-decoration: none;
+    color: #000;
+}
+a:nth-child(-n + 4) {
+    margin-top: 0;
+}
+
+.load-more {
+    font-size: 20px;
+    border-radius: 10px;
+    color: cornsilk;
+    border-color: transparent;
+    background-color: cornflowerblue;
+    margin: 40px auto 0;
+    width: 250px;
+    height: 50px;
+}
+
+.load-more:hover {
+    cursor: pointer;
+    background-color: #4169E1;
+}
+
